@@ -1,0 +1,430 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Northern Arc Studio</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <script src="https://unpkg.com/split-type"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Anek+Devanagari:wght@100..800&family=Bebas+Neue&family=Golos+Text:wght@400..900&family=Jockey+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Odibee+Sans&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        </style>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body class="bg-black w-screen overflow-x-hidden">
+
+        <header></header>
+
+        <section id="hero" class="relative w-full bg-black text-white h-[750px]">
+            <div id="hero-text-wrapper" class="relative z-10 flex flex-col items-center justify-center px-4 py-24 sm:px-6 lg:px-8 text-center max-w-5xl mx-auto h-full">
+                <div class="">
+                    <h1 id="hero-heading-1" class="text-7xl h-[80px] overflow-y-hidden leading-tighter playfair">
+                        High-End Website Design
+                    </h1>
+                    <h1 id="hero-heading-2" class="text-7xl h-[80px] overflow-y-hidden leading-tighter playfair">
+                        For Your Business Needs
+                    </h1>
+                </div>
+                <div class="text-lg md:text-xl text-center text-gray-300 mt-[16px]">
+                        <p id="hero-subheading-1" class="hero-subheading height-[20px] overflow-y-hidden">Strategic web design for fine-dining brands</p>
+                        <p id="hero-subheading-2" class="hero-subheading height-[20px] overflow-y-hidden">that expect their digital presence to be as refined as their guest experience.</p>
+                </div>
+                <a id="hero-btn" href="#services" class="inline-flex items-center gap-3 mt-8 px-6 py-3 text-white bg-white/10 border border-white hover:bg-white/20 rounded-full transition">
+                    <span class="text-lg text-green-500 font-medium">Discover Our Services</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Background Video -->
+            <div class="absolute inset-0 z-0">
+                <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                <source src="https://cdn.prod.website-files.com/67da21f4c597ad1aacb6a566%2F67ddb5c1e7dbe1c5f278e9e6_Blue-Wave-GT-Background-Loop-transcode.mp4" type="video/mp4">
+                <source src="https://cdn.prod.website-files.com/67da21f4c597ad1aacb6a566%2F67ddb5c1e7dbe1c5f278e9e6_Blue-Wave-GT-Background-Loop-transcode.webm" type="video/webm">
+                </video>
+            </div>
+        </section>
+
+        <!-- about https://clementgrellier.fr/ -->
+        <section id="about" class="px-[40px] py-[100px] w-full h-screen bg-white overflow-x-hidden">
+
+            <!-- wrapper -->
+            <div id="about-wrapper" class="w-full">
+                <h1 id="about-title" class="text-[120px] w-full font-[900] tracking-tighter text-black/80">
+                    ABOUT
+                </h1>
+
+                <div class="flex flex-col md:flex-row gap-12 px-[120px]">
+
+                    <!-- Left Column -->
+                    <div class="md:w-1/2 space-y-6">
+                        <div class="aspect-video overflow-hidden rounded-lg shadow-lg">
+                        <video 
+                            class="w-full h-full object-cover" 
+                            muted 
+                            playsinline 
+                            autoplay 
+                            loop 
+                            preload="none">
+                            <source src="video/video.mp4" type="video/mp4" />
+                        </video>
+                        </div>
+                        <h2 class="text-2xl font-semibold leading-snug text-gray-900">
+                        Creating Seamless Journeys Through Design & Motion.
+                        </h2>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="md:w-1/2 p-[80px] gap-[40px] flex flex-col">
+                        <p id="about-description" class="text-[20px] font-[100]">
+                        We design and build modern websites, capture stunning visuals, and craft digital experiences that feel effortless. With a focus on clarity and quality, we help brands tell their story — beautifully and effectively.
+                        </p>
+                        
+                        <div id="about-btns" class="flex gap-[24px]">
+                            <a id="about-btn-demo" href="#demo" class="flex items-center gap-3 px-6 py-6 h-fit border border-black rounded-full transition hover:bg-black/10">
+                                <span class="text-lg text-green-500 font-medium">Demo Websites</span>
+                                <svg id="about-btn-demo-svg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"></path>
+                                </svg>
+                            </a>
+                        
+                            <div class="flex items-center justify-center h-20">
+                                <a href="#contact" class="text-gray-600 hover:text-gray-900 transition font-medium underline underline-offset-4 text-center">
+                                Contact Us
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- https://www.wheregiantsroam.co.uk/ -->
+        <!-- video in background upon hovering each service -->
+        <section id="services" class="flex flex-col lg:flex-row lg:items-start gap-8 px-[40px] py-[100px] bg-black/80 text-white/90 relative">
+
+            <!-- Background Video -->
+            <div id="service-bg-video-wrapper" class="absolute top-0 left-0 w-full h-full z-[-9]">
+
+                <!-- video-1 -->
+                <div id="service-bg-video-web-design" class="absolute top-0 left-0 w-full h-full inset-0 z-0">
+                    <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                    <source src="https://cdn.prod.website-files.com/67da21f4c597ad1aacb6a566%2F67ddb5c1e7dbe1c5f278e9e6_Blue-Wave-GT-Background-Loop-transcode.mp4" type="video/mp4">
+                    <source src="https://cdn.prod.website-files.com/67da21f4c597ad1aacb6a566%2F67ddb5c1e7dbe1c5f278e9e6_Blue-Wave-GT-Background-Loop-transcode.webm" type="video/webm">
+                    </video>
+                </div>
+
+                <!-- video-2 -->
+                 <div id="service-bg-video-photography" class="absolute top-0 left-0 w-full h-full inset-0 z-0">
+                    <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                    <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                    <source src="https://cdn.prod.website-files.com/67da21f4c597ad1aacb6a566%2F67ddb5c1e7dbe1c5f278e9e6_Blue-Wave-GT-Background-Loop-transcode.webm" type="video/webm">
+                    </video>
+                </div>
+                
+                <!-- video-3 -->
+                 <div id="service-bg-video-cinematic-films" class="absolute top-0 left-0 w-full h-full inset-0 z-0">
+                    <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                    <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"" type="video/mp4">
+                    <source src="https://cdn.prod.website-files.com/67da21f4c597ad1aacb6a566%2F67ddb5c1e7dbe1c5f278e9e6_Blue-Wave-GT-Background-Loop-transcode.webm" type="video/webm">
+                    </video>
+                </div>
+                
+                <!-- video-4 -->
+                 <div id="service-bg-video-3d-design" class="absolute top-0 left-0 w-full h-full inset-0 z-0">
+                    <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                    <source src="https://cdn.prod.website-files.com/67da21f4c597ad1aacb6a566%2F67ddb5c1e7dbe1c5f278e9e6_Blue-Wave-GT-Background-Loop-transcode.mp4" type="video/mp4">
+                    <source src="https://cdn.prod.website-files.com/67da21f4c597ad1aacb6a566%2F67ddb5c1e7dbe1c5f278e9e6_Blue-Wave-GT-Background-Loop-transcode.webm" type="video/webm">
+                    </video>
+                </div>
+            </div>
+
+            <!-- Left Column -->
+            <div class="lg:w-1/2">
+                <h2 id="services-title" class="text-[120px] overflow-y-hidden height-[100px] tracking-tighter font-[900]">SERVICES</h2>
+            </div>
+
+            <!-- Right Column -->
+            <div class="lg:w-full mt-[132px]">
+                <ul id="services-list" class="text-[42px] font-[400] flex flex-col text-white tracking-tighter">
+                    <li id="service-list-item-web-design" class="flex gap-[24px] border-b p-[32px]">
+                        <p class="text-[20px] mt-[8px]">(01)</p>
+                        <a href="#" class="transition tracking-tighter">
+                        Web Designing and Development
+                        </a>
+                    </li>
+                    <li id="service-list-item-photography" class="flex gap-[24px] border-b p-[32px]">
+                        <p class="text-[20px] mt-[8px]">(02)</p>
+                        <a href="#" class="transition tracking-tighter">
+                        Photography
+                        </a>
+                    </li>
+                    <li id="service-list-item-cinematic-films" class="flex gap-[24px] border-b p-[32px]">
+                        <p class="text-[20px] mt-[8px]">(03)</p>
+                        <a href="#" class="transition tracking-tighter">
+                        Cinematic Films
+                        </a>
+                    </li>
+                    <li id="service-list-item-3d-design" class="flex gap-[24px] border-b p-[32px]">
+                        <p class="text-[20px] mt-[8px]">(04)</p>
+                        <a href="#" class="transition tracking-tighter">
+                        3D Design
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- https://www.wix.com/studio/pantone-color-of-the-year-2025 -->
+        <section id="demo" class="flex flex-col gap-[100px] px-[24px] py-[240px] bg-white">
+            <h1 class="text-[20px] font-bold text-black/90 tracking-tighter">Demos</h1>
+            <div class="px-[160px]">
+                <h1 class="text-[90px] tracking-tighter text-black/80 leading-[100px] font-light">See the Craft Behind the Code, <span class="uppercase font-[900]">Explore Our Demos</span></h1>  
+            </div>  
+            
+            <!-- Columns -->
+            <div class="grid grid-cols-1 md:grid-cols-5 border-t border-[#d8cabe] text-sm md:text-base">        
+
+                <!-- Column 1 -->
+                    <a href="{% url 'demo.homestay.index' %}" class="p-6 border-r border-[#d8cabe]">
+                        <!-- Label -->
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 bg-[#e95d0f] inline-block"></span>
+                            <span class="uppercase tracking-wide text-xs font-medium">Website</span>
+                        </div>
+                    
+                        <!-- Image -->
+                        <img src="https://i.imgur.com/nN9zY0I.png" alt="rock stack" class="mx-auto max-h-56 object-contain" />
+
+                        <!-- Text -->
+                        <h3 class="text-lg font-semibold">Homestay Website Demo</h3>
+                        <p class="text-[#5a3e2e] text-sm leading-relaxed">
+                            Subtly align sites with sustainable values like eco-friendliness and long-term thinking. Rough rock and notes of clay spekak to durability.
+                        </p>
+                    </a>
+
+                <!-- Column 2 -->
+                <div class="p-6 border-r border-[#d8cabe]">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 bg-[#a5694f] inline-block"></span>
+                        <span class="uppercase tracking-wide text-xs font-medium">Website</span>
+                    </div>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="p-6 border-r border-[#d8cabe]">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 bg-[#a5694f] inline-block"></span>
+                        <span class="uppercase tracking-wide text-xs font-medium">Photography</span>
+                    </div>
+                </div>
+
+                <!-- Column 4 -->
+                <div class="p-6 border-r border-[#d8cabe]">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 bg-[#a5694f] inline-block"></span>
+                        <span class="uppercase tracking-wide text-xs font-medium">3D Modelling</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- pricing -->
+        <section id="pricing" class="text-center py-[120px] px-[24px] bg-white">
+            <h1 class="text-[20px] font-bold text-black/90 tracking-tighter text-left">Pricing</h1>
+            <div class="flex flex-col gap-[80px] py-[80px]">    
+                <div class="px-[160px]">
+                    <h1 class="text-[90px] text-left text-black/80 text-left tracking-tighter leading-[100px] font-[100]">Premium Web Design at <span class="italic font-[900] text-green-500">Competitive Rates</span></h1>
+                </div>
+
+                <!-- Pricing Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                
+                    <!-- Starter Plan -->
+                    <div class="bg-black/10 p-8 rounded-2xl shadow-lg flex flex-col justify-between border border-gray-200">
+                        <div>
+                            <h2 class="text-xl font-semibold mb-2">Starter Website Package</h2>
+                            <p class="text-3xl font-bold mb-4">₹14,999*</p>
+                            <ul class="text-left space-y-2 text-sm">
+                                <li>✓ Up to 6 Pages</li>
+                                <li>✓ Contact Form</li>
+                                <li>✓ Click-to-call / WhatsApp button</li>
+                                <li>✓ Social media links</li>
+                                <li>✓ Basic SEO Setup</li>
+                                <li>✓ Speed optimization</li>
+                                <li>✓ Clean, mobile-responsive layout</li>
+                                <li>✓ Custom color scheme</li>
+                                <li>✓ Use of royalty-free images/icons</li>
+                                <li>✓ Email support</li>
+                            </ul>
+                            <p class="text-xs text-gray-500 mt-4 italic text-left">* Domain name, SSL Certificate and hosting billed separately if needed.</p>
+                        </div>
+                        <button class="mt-6 bg-black/90 hover:bg-gray-600 text-white py-2 rounded">Book a Call</button>
+                    </div>
+
+                    <!-- Business -->
+                    <div class="bg-black/10 p-8 rounded-2xl shadow-lg flex flex-col justify-between border-2 border-green-500">
+                        <div>
+                            <h2 class="text-xl font-semibold mb-2">Business Website Package</h2>
+                            <p class="text-3xl font-bold mb-4">From: ₹29,999*</p>
+                            <ul class="text-left space-y-2 text-sm">
+                                <li>✓ Everything in Starter Package</li>
+                                <li>+ 8–15 Total Pages</li>
+                                <li>+ Custom design with animations</li>
+                                <li>+ Admin Panel (CMS – Django)</li>
+                                <li>+ Blog or News Management System</li>
+                                <li>+ Appointment or Quote Request Forms</li>
+                                <li>+ Newsletter Integration (Mailchimp etc.)</li>
+                                <li>+ Google Maps Integration</li>
+                                <li>+ Free SSL Certificate</li>
+                                <li>+ 30 Days of Post-Launch Support</li>
+                            </ul>
+                            <p class="text-xs text-gray-500 mt-4 italic text-left">* Domain name and hosting billed separately if needed.</p>
+                        </div>
+                        <button class="mt-6 bg-green-500 hover:bg-green-400 text-black font-semibold py-2 rounded">Book a call</button>
+                    </div>
+
+                    <!-- Custom -->
+                    <div class="bg-black/10 p-8 rounded-2xl shadow-lg flex flex-col justify-between">
+                        <div>
+                            <h2 class="text-xl font-semibold mb-2">Custom Website Package</h2>
+                            <p class="text-3xl font-bold mb-4">From: ₹49,999*</p>
+                            <ul class="text-left space-y-2 text-sm">
+                                <li>✓ Everything in Business Package</li>
+                                <li>+ Fully Custom Django Admin Panel</li>
+                                <li>+ Custom models, views, and APIs as needed</li>
+                                <li>+ Role-based authentication (admin, editor, users)</li>
+                                <li>+ Integrated backend workflows (e.g. leads, job forms)</li>
+                                <li>+ REST API or AJAX integration (optional)</li>
+                                <li>+ Custom forms with validation & email triggers</li>
+                                <li>+ Deployment to cloud (DigitalOcean, etc.)</li>
+                                <li>+ Lifetime access to source code</li>
+                                <li>+ 60 Days of Post-Launch Support</li>
+                            </ul>
+                            <p class="text-xs text-gray-500 mt-4 italic text-left">* Domain name and hosting billed separately if needed.</p>
+                        </div>
+                        <button class="mt-6 bg-black/90 hover:bg-gray-600 text-white py-2 rounded">Book a call</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- tech we use -->
+        <section id="technologies" class="bg-white px-[40px] pb-[120px]">
+            <h1 class="text-[20px] font-bold text-black/90 tracking-tighter text-left">Tech</h1>
+            <div class="max-w-6xl mx-auto px-[40px] py-[120px] text-center flex flex-col gap-[40px]">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4 uppercase">Technologies We Use</h2>
+                    <p class="text-gray-500 mb-12">The tools I trust to build scalable, fast, and modern websites</p>
+                </div>
+
+                <div class="grid grid-cols-3 w-full gap-[80px] items-center justify-center">
+
+                    <!-- Django -->
+                    <div class="transition-transform transform hover:scale-105">
+                        <img src="https://static.djangoproject.com/img/logos/django-logo-negative.svg" alt="Django" class="h-10 mx-auto grayscale hover:grayscale-0 transition duration-300">
+                    </div>
+
+                    <!-- JavaScript -->
+                    <div class="transition-transform transform hover:scale-105">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" class="h-10 mx-auto grayscale hover:grayscale-0 transition duration-300">
+                    </div>
+
+                    <!-- Tailwind CSS -->
+                    <div class="transition-transform transform hover:scale-105">
+                        <img src="https://tailwindcss.com/_next/static/media/tailwindcss-logotype.128b6e5a.svg" alt="Tailwind CSS" class="h-10 mx-auto grayscale hover:grayscale-0 transition duration-300">
+                    </div>
+
+                    <!-- HTML -->
+                    <div class="transition-transform transform hover:scale-105">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5" class="h-10 mx-auto grayscale hover:grayscale-0 transition duration-300">
+                    </div>
+
+                    <!-- CSS -->
+                    <div class="transition-transform transform hover:scale-105">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3" class="h-10 mx-auto grayscale hover:grayscale-0 transition duration-300">
+                    </div>
+                    
+                    <!-- GSAP -->
+                    <div class="transition-transform transform hover:scale-105">
+                        <img src="https://greensock.com/uploads/monthly_2020_03/gsap-greensock-logo.svg.7cbf5c0076c16166f3d7638d0f7b1d6b.svg" alt="GSAP" class="h-10 mx-auto grayscale hover:grayscale-0 transition duration-300">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- https://telepathicinstruments.com/ -->
+        <section id="faqs">
+            <h1>Frequently Asked Questions</h1>
+        </section>
+
+        <!-- https://www.ginivini.com/en -->
+        <!-- https://www.thefoundation.house/contact -->
+        <section id="contact" class="px-[40px] py-[120px] w-full flex" style="background-image: url('https://marcopoloexperience.com/wp-content/uploads/2023/02/ITtechnologies-marcopoloexperience.jpg'); background-size: cover; background-position: center; text-decoration: none;">
+            
+            <!-- image -->
+            <div class="w-1/2">
+            </div>
+
+            <!-- text -->
+            <div class="w-1/2 text-white flex flex-col gap-[40px] bg-white/10 border border-white/20 p-[40px] rounded-[8px] ">
+
+                <!-- Heading -->
+                <h1 class="text-[100px] tracking-[-10px] font-bold">GET IN TOUCH</h1>
+
+                <!-- Subheading -->
+                <p class="font-semibold text-lg">We’re Waiting to Hear From You</p>
+                <p class="text-sm">Drop us a line and find out what you've been missing.</p>
+
+                <!-- Contact Buttons -->
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="mailto:info@thefoundation.house" class="bg-white/20 backdrop-blur-sm px-5 py-2 rounded-full text-white text-sm hover:bg-white/30 transition">
+                        northernarcstudio@gmail.com↗
+                    </a>
+                    <a href="tel:+17183093000" class="bg-white/20 backdrop-blur-sm px-5 py-2 rounded-full text-white text-sm hover:bg-white/30 transition">
+                        945-939-6911
+                    </a>
+                </div>
+
+                <div class="flex flex-col gap-[16px] mt-[20px]">
+                
+                    <!-- Divider -->
+                    <hr class="border-t border-white/30" />
+                    
+                    <!-- Form Title -->
+                    <p class="font-semibold">Let's Get Things Started</p>
+                
+                    <!-- Divider -->
+                    <hr class="border-t border-white/30" /> 
+                </div>
+
+                <!-- form wrapper -->
+                <div class="flex flex-col gap-[16px]">
+                    
+                    <p class="">Your Details</p>
+                    
+                    <!-- Form -->
+                    <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="text" placeholder="First Name" class="p-3 border-b border-white/50 hover:border-white hover:placeholder:text-white transition" />
+                        <input type="text" placeholder="Last Name" class="p-3 border-b border-white/50 hover:border-white hover:placeholder:text-white transition" />
+                        <input type="email" placeholder="Phone No." class="p-3 border-b border-white/50 hover:border-white hover:placeholder:text-white transition" />
+                        <input type="text" placeholder="Message" class="p-3 border-b border-white/50 hover:border-white hover:placeholder:text-white transition" />
+                        
+                        <!-- Submit Button -->
+                        <button type="submit" class="bg-white text-blue-600 px-6 py-2 rounded-full text-sm mt-[16px] w-fit font-semibold hover:bg-gray-100 transition">
+                                Submit ↗
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+    </section>
+        <footer></footer>
+    <script src="{% static 'js/animations.js' %}"></script>
+    </body>
+</html>
