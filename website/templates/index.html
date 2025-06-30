@@ -18,8 +18,10 @@
 
         <header></header>
 
-        <section id="hero" class="relative w-full bg-black text-white h-[750px]">
+        <section id="hero" class="relative w-full bg-black text-white h-[750px] hidden_not">
             <div id="hero-text-wrapper" class="relative z-10 flex flex-col items-center justify-center px-4 py-24 sm:px-6 lg:px-8 text-center max-w-5xl mx-auto h-full">
+
+                <!-- heading -->
                 <div class="">
                     <h1 id="hero-heading-1" class="text-7xl h-[80px] overflow-y-hidden leading-tighter playfair">
                         High-End Website Design
@@ -28,10 +30,14 @@
                         For Your Business Needs
                     </h1>
                 </div>
+
+                <!-- subheading -->
                 <div class="text-lg md:text-xl text-center text-gray-300 mt-[16px]">
                         <p id="hero-subheading-1" class="hero-subheading height-[20px] overflow-y-hidden">Strategic web design for fine-dining brands</p>
                         <p id="hero-subheading-2" class="hero-subheading height-[20px] overflow-y-hidden">that expect their digital presence to be as refined as their guest experience.</p>
                 </div>
+
+                <!-- cta -->
                 <a id="hero-btn" href="#services" class="inline-flex items-center gap-3 mt-8 px-6 py-3 text-white bg-white/10 border border-white hover:bg-white/20 rounded-full transition">
                     <span class="text-lg text-green-500 font-medium">Discover Our Services</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
@@ -41,7 +47,7 @@
             </div>
 
             <!-- Background Video -->
-            <div class="absolute inset-0 z-0">
+            <div id="hero-bg-video" class="absolute inset-0 z-0">
                 <video autoplay loop muted playsinline class="w-full h-full object-cover">
                 <source src="https://cdn.prod.website-files.com/67da21f4c597ad1aacb6a566%2F67ddb5c1e7dbe1c5f278e9e6_Blue-Wave-GT-Background-Loop-transcode.mp4" type="video/mp4">
                 <source src="https://cdn.prod.website-files.com/67da21f4c597ad1aacb6a566%2F67ddb5c1e7dbe1c5f278e9e6_Blue-Wave-GT-Background-Loop-transcode.webm" type="video/webm">
@@ -50,7 +56,7 @@
         </section>
 
         <!-- about https://clementgrellier.fr/ -->
-        <section id="about" class="px-[40px] py-[100px] w-full h-screen bg-white overflow-x-hidden">
+        <section id="about" class="px-[40px] py-[100px] w-full h-screen bg-white overflow-x-hidden hidden_not">
 
             <!-- wrapper -->
             <div id="about-wrapper" class="w-full">
@@ -106,7 +112,7 @@
 
         <!-- https://www.wheregiantsroam.co.uk/ -->
         <!-- video in background upon hovering each service -->
-        <section id="services" class="flex flex-col lg:flex-row lg:items-start gap-8 px-[40px] py-[100px] bg-black/80 text-white/90 relative">
+        <section id="services" class="flex flex-col lg:flex-row lg:items-start gap-8 px-[40px] py-[100px] bg-black/80 text-white/90 relative hidden_not">
 
             <!-- Background Video -->
             <div id="service-bg-video-wrapper" class="absolute top-0 left-0 w-full h-full z-[-9]">
@@ -181,62 +187,122 @@
         </section>
 
         <!-- https://www.wix.com/studio/pantone-color-of-the-year-2025 -->
-        <section id="demo" class="flex flex-col gap-[100px] px-[24px] py-[240px] bg-white">
-            <h1 class="text-[20px] font-bold text-black/90 tracking-tighter">Demos</h1>
+        <section id="demo" class="flex flex-col gap-[100px] px-[24px] py-[240px] bg-white hidden_not">
+            
+            <!-- title -->
+            <h1 class="text-[20px] font-bold text-[#00b0d1] tracking-tighter">Demos</h1>
+
+            <!--demos wrapper -->
             <div class="px-[160px]">
-                <h1 class="text-[90px] tracking-tighter text-black/80 leading-[100px] font-light">See the Craft Behind the Code, <span class="uppercase font-[900]">Explore Our Demos</span></h1>  
-            </div>  
+                <h1 id="demo-heading" class="text-[90px] tracking-tighter text-black/80 leading-[100px] font-light">See the Craft Behind the Code, <span id="demo-heading-2" class="uppercase font-[900]">Explore Our Demos</span></h1>
+            </div> 
             
             <!-- Columns -->
-            <div class="grid grid-cols-1 md:grid-cols-5 border-t border-[#d8cabe] text-sm md:text-base">        
+            <div class="flex justify-center w-full overflow-x-hidden">
 
                 <!-- Column 1 -->
-                    <a href="{% url 'demo.homestay.index' %}" class="p-6 border-r border-[#d8cabe]">
-                        <!-- Label -->
-                        <div class="flex items-center gap-2">
-                            <span class="w-2 h-2 bg-[#e95d0f] inline-block"></span>
-                            <span class="uppercase tracking-wide text-xs font-medium">Website</span>
-                        </div>
-                    
-                        <!-- Image -->
-                        <img src="https://i.imgur.com/nN9zY0I.png" alt="rock stack" class="mx-auto max-h-56 object-contain" />
+                <a href="{% url 'demo.homestay.index' %}" class="w-[40%] overflow-x-hidden bg-yellow-500 p-[24px] block h-[500px] relative flex flex-col justify-between border border-[1px] border-white/80 demo-single-column">
 
-                        <!-- Text -->
-                        <h3 class="text-lg font-semibold">Homestay Website Demo</h3>
-                        <p class="text-[#5a3e2e] text-sm leading-relaxed">
-                            Subtly align sites with sustainable values like eco-friendliness and long-term thinking. Rough rock and notes of clay spekak to durability.
-                        </p>
-                    </a>
+                    <!-- BG Image -->
+                    <img src="https://10web.io/wp-content/uploads/2024/12/accommodation_featured_image.jpg" alt="rock stack" class="mx-auto absolute z-[9] top-0 left-0 w-full h-full object-cover mb-4" />
 
-                <!-- Column 2 -->
-                <div class="p-6 border-r border-[#d8cabe]">
-                    <div class="flex items-center gap-2">
-                        <span class="w-2 h-2 bg-[#a5694f] inline-block"></span>
+                    <!-- overlay -->
+                     <div class="bg-gradient-to-t from-black/80 to-black/0 z-[99] absolute w-full h-full top-0 left-0"></div>
+
+                    <!-- Label -->
+                    <div class="flex items-center gap-2 w-full mb-4 relative z-[999]">
+                        <span class="w-2 h-2 bg-[#e95d0f] inline-block rounded-full"></span>
                         <span class="uppercase tracking-wide text-xs font-medium">Website</span>
                     </div>
-                </div>
 
-                <!-- Column 3 -->
-                <div class="p-6 border-r border-[#d8cabe]">
-                    <div class="flex items-center gap-2">
-                        <span class="w-2 h-2 bg-[#a5694f] inline-block"></span>
+                    <div class="flex flex-col relative z-[99] text-white">
+                        <!-- Text -->
+                        <h3 class="text-lg font-semibold mb-[4px]">Homestay Website Demo</h3>
+                        <p class="text-sm tracking-wide leading-relaxed w-[600px]">
+                            Subtly align sites with sustainable values like eco-friendliness and long-term thinking. Rough rock and notes of clay speak to durability.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Column 2 -->
+                <a href="#" class="w-[20%] overflow-x-hidden bg-yellow-500 p-[24px] block h-[500px] relative flex flex-col justify-between border border-[1px] border-white/80 demo-single-column">
+
+                    <!-- BG Image -->
+                    <img src="https://www.69dropsstudio.co.uk/wp-content/uploads/2020/02/Fruit-photography_apple.jpeg" alt="rock stack" class="mx-auto absolute z-[9] top-0 left-0 w-full h-full object-cover mb-4" />
+
+                    <!-- overlay -->
+                     <div class="bg-gradient-to-t from-black/80 to-black/0 z-[99] absolute w-full h-full top-0 left-0"></div>
+
+                    <!-- Label -->
+                    <div class="flex items-center gap-2 w-full mb-4 relative z-[999]">
+                        <span class="w-2 h-2 bg-[#e95d0f] inline-block rounded-full"></span>
                         <span class="uppercase tracking-wide text-xs font-medium">Photography</span>
                     </div>
-                </div>
+
+                    <div class="flex flex-col relative z-[99] text-white">
+                        <!-- Text -->
+                        <h3 class="text-lg font-semibold mb-[4px]">Orchard Photography</h3>
+                        <p class="text-sm tracking-wide leading-relaxed w-[600px]">
+                            Subtly align sites with sustainable values like eco-friendliness and long-term thinking. Rough rock and notes of clay speak to durability.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Column 3 -->
+                <a href="#" class="w-[20%] overflow-x-hidden bg-yellow-500 p-[24px] block h-[500px] relative flex flex-col justify-between border border-[1px] border-white/80 demo-single-column">
+
+                    <!-- BG Image -->
+                    <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/construction-free-construction-website-template.jpg" alt="rock stack" class="mx-auto absolute z-[9] top-0 left-0 w-full h-full object-cover mb-4" />
+
+                    <!-- overlay -->
+                     <div class="bg-gradient-to-t from-black/80 to-black/0 z-[99] absolute w-full h-full top-0 left-0"></div>
+
+                    <!-- Label -->
+                    <div class="flex items-center gap-2 w-full mb-4 relative z-[999]">
+                        <span class="w-2 h-2 bg-[#e95d0f] inline-block rounded-full"></span>
+                        <span class="uppercase tracking-wide text-xs font-medium">Website</span>
+                    </div>
+
+                    <div class="flex flex-col relative z-[99] text-white">
+                        <!-- Text -->
+                        <h3 class="text-lg font-semibold mb-[4px]">Homestay Website Demo</h3>
+                        <p class="text-sm tracking-wide leading-relaxed w-[600px]">
+                            Subtly align sites with sustainable values like eco-friendliness and long-term thinking. Rough rock and notes of clay speak to durability.
+                        </p>
+                    </div>
+                </a>
 
                 <!-- Column 4 -->
-                <div class="p-6 border-r border-[#d8cabe]">
-                    <div class="flex items-center gap-2">
-                        <span class="w-2 h-2 bg-[#a5694f] inline-block"></span>
-                        <span class="uppercase tracking-wide text-xs font-medium">3D Modelling</span>
+                <a href="#" class="w-[20%] overflow-x-hidden bg-yellow-500 p-[24px] block h-[500px] relative flex flex-col justify-between border border-[1px] border-white/80 demo-single-column">
+
+                    <!-- BG Image -->
+                    <img src="https://i.imgur.com/nN9zY0I.png" alt="rock stack" class="mx-auto absolute z-[9] top-0 left-0 w-full h-full object-cover mb-4" />
+
+                    <!-- overlay -->
+                     <div class="bg-gradient-to-t from-black/80 to-black/0 z-[99] absolute w-full h-full top-0 left-0"></div>
+
+                    <!-- Label -->
+                    <div class="flex items-center gap-2 w-full mb-4 relative z-[999]">
+                        <span class="w-2 h-2 bg-[#e95d0f] inline-block rounded-full"></span>
+                        <span class="uppercase tracking-wide text-xs font-medium">Website</span>
                     </div>
-                </div>
+
+                    <div class="flex flex-col relative z-[99] text-white">
+                        <!-- Text -->
+                        <h3 class="text-lg font-semibold mb-[4px]">Homestay Website Demo</h3>
+                        <p class="text-sm tracking-wide leading-relaxed w-[600px]">
+                            Subtly align sites with sustainable values like eco-friendliness and long-term thinking. Rough rock and notes of clay speak to durability.
+                        </p>
+                    </div>
+                </a>
+
+                
             </div>
         </section>
 
         <!-- pricing -->
         <section id="pricing" class="text-center py-[120px] px-[24px] bg-white">
-            <h1 class="text-[20px] font-bold text-black/90 tracking-tighter text-left">Pricing</h1>
+            <h1 class="text-[20px] font-bold text-[#00b0d1] tracking-tighter text-left">Pricing</h1>
             <div class="flex flex-col gap-[80px] py-[80px]">    
                 <div class="px-[160px]">
                     <h1 class="text-[90px] text-left text-black/80 text-left tracking-tighter leading-[100px] font-[100]">Premium Web Design at <span class="italic font-[900] text-green-500">Competitive Rates</span></h1>
@@ -315,8 +381,8 @@
         </section>
 
         <!-- tech we use -->
-        <section id="technologies" class="bg-white px-[40px] pb-[120px]">
-            <h1 class="text-[20px] font-bold text-black/90 tracking-tighter text-left">Tech</h1>
+        <section id="technologies" class="bg-white px-[40px] pb-[160px]">
+            <h1 class="text-[20px] font-bold text-[#00b0d1] tracking-tighter text-left">Tech</h1>
             <div class="max-w-6xl mx-auto px-[40px] py-[120px] text-center flex flex-col gap-[40px]">
                 <div>
                     <h2 class="text-3xl font-bold text-gray-800 mb-4 uppercase">Technologies We Use</h2>

@@ -145,6 +145,39 @@ function hoverFadeSiblings(containerSelector) {
   });
 }
 
+function sizeChangeOnHover(){
+  const children = document.querySelectorAll(".demo-single-column")
+  children.forEach(child => {
+    child.addEventListener('mouseenter', () => {
+      children.forEach(el => {
+        if (el === child) {
+          gsap.to(el, {
+              width: "40%",
+              duration: 2.4,
+              ease: "elastic.out(1, 0.3)"
+            });
+        } else {
+          gsap.to(el, {
+              width: "20%",
+              duration: 2.4,
+              ease: "elastic.out(1, 0.3)"
+            });
+        }
+      });
+    });
+
+    child.addEventListener('mouseleave', () => {
+      child.classList.remove('hovered');
+    });
+  });  
+}
+
+
+
+
+
+
+
 // hero
 animateWithSplitType('#hero-heading-1', options = {
     y: 200,
@@ -217,3 +250,15 @@ moveOnScroll("#services-list", options = {
     end: "top -100%",
     scrub: true
 });
+
+// demos
+slideInFromX("#demo-heading", options = {
+    opacity: 0,
+    x: "-10%",
+    duration: 1.4,
+    trigger: "#demo",
+    ease: "power2.out",
+    start: "top 60%"
+});
+sizeChangeOnHover();
+
