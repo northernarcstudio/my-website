@@ -13,4 +13,4 @@ class ContactAdmin(admin.ModelAdmin):
     ordering = ("-created_at",)
 
     # Optional: make timestamps read-only in detail view
-    readonly_fields = ("created_at", "updated_at")
+    readonly_fields = ("first_name","last_name","phone_number","message","created_at", "updated_at")
