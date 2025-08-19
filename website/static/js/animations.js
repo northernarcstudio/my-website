@@ -11,6 +11,7 @@ function animateWithSplitType(selector, options = {}) {
             toggleActions: options.toggleActions || 'play none none none',
         },
         y: options.y || 50,
+        rotateZ: options.rotate || 0,
         opacity: 1,
         duration: options.duration || 1.2,
         stagger: options.stagger || 0.1,
@@ -180,17 +181,18 @@ function sizeChangeOnHover(){
 
 // hero
 animateWithSplitType('#hero-heading-1', options = {
-    y: 200,
-    duration: 1,
+    y: 100,
+    rotateZ: 45,
     delay: 0,
     trigger: "#hero",
-    stagger: 0.05,
+    stagger: 0.08,
 });
 animateWithSplitType('#hero-heading-2', options = {
-    y: 200,
-    duration: 1,
-    delay: 1,
-    stagger: 0.05,
+    y: 100,
+    rotateZ: 45,
+    delay: 2,
+    trigger: "#hero",
+    stagger: 0.08,
 });
 moveOnScroll("#hero-text-wrapper", options = {
     y: -100,
@@ -243,10 +245,10 @@ animateWithSplitType('#services-title', options = {
 });
 hoverFadeSiblings("#services-list")
 moveOnScroll("#services-list", options = {
-    y: -300,
+    y: -100,
     opacity: 0,
     trigger: "#services",
-    start: "top 0%",
+    start: "top 80%",
     end: "top -100%",
     scrub: true
 });
