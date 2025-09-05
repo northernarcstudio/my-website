@@ -173,6 +173,24 @@ function sizeChangeOnHover(){
   });  
 }
 
+function pricingFlipOnClick(arrow, rotateY, opacity, rotateOthers, opacityOthers){
+  const arrowClicked = document.querySelector(arrow)
+  arrowClicked.addEventListener('click', () => {
+    gsap.to(".pricing-website-single", {
+        rotateY : rotateY,
+        ease: "power4.out",
+        duration: 1.6,
+        opacity: opacity
+    })
+    gsap.to(".pricing-others-single", {
+        rotateY : rotateOthers,
+        ease: "power4.out",
+        duration: 1.6,
+        opacity: opacityOthers
+    })
+  })
+}
+
 
 
 
@@ -263,4 +281,8 @@ slideInFromX("#demo-heading", options = {
     start: "top 60%"
 });
 sizeChangeOnHover();
+
+//pricing
+pricingFlipOnClick("#pricing-right-arrow", 360 * 4, 0, 360 * 4, 1 );
+pricingFlipOnClick("#pricing-left-arrow", 0, 1, 0, 0);
 

@@ -1,7 +1,7 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} {% block content %} {% load static%}
 <section
   id="hero"
-  class="relative w-full bg-black text-white h-[750px] hidden_not"
+  class="relative w-full bg-black text-white h-[750px] hidden xxxxxx"
 >
   <div
     id="hero-text-wrapper"
@@ -83,7 +83,7 @@
 <!-- about https://clementgrellier.fr/ -->
 <section
   id="about"
-  class="px-[40px] py-[100px] w-full h-screen bg-white overflow-x-hidden hidden_not"
+  class="px-[40px] py-[100px] w-full h-screen bg-white overflow-x-hidden hidden xxxxxx"
 >
   <!-- wrapper -->
   <div id="about-wrapper" class="w-full">
@@ -169,7 +169,7 @@
 <!-- video in background upon hovering each service -->
 <section
   id="services"
-  class="flex flex-col lg:flex-row lg:items-start gap-8 px-[40px] py-[100px] bg-black/80 text-white/90 relative hidden_not"
+  class="flex flex-col lg:flex-row lg:items-start gap-8 px-[40px] py-[100px] bg-black/80 text-white/90 relative hidden xxxxxx"
 >
   <!-- Background Video -->
   <div
@@ -297,7 +297,7 @@
 <!-- https://www.wix.com/studio/pantone-color-of-the-year-2025 -->
 <section
   id="demo"
-  class="flex flex-col gap-[100px] px-[24px] py-[240px] bg-white hidden_not"
+  class="flex flex-col gap-[100px] px-[24px] py-[240px] bg-white hidden xxxxxx"
 >
   <!-- title -->
   <h1 class="text-[20px] font-bold text-[#00b0d1] tracking-tighter">Demos</h1>
@@ -458,7 +458,10 @@
   <h1 class="text-[20px] font-bold text-[#00b0d1] tracking-tighter text-left">
     Pricing
   </h1>
+
+  <!-- wrapper -->
   <div class="flex flex-col gap-[80px] py-[80px]">
+    <!-- heading -->
     <div class="px-[160px]">
       <h1
         class="text-[90px] text-left text-black/80 text-left tracking-tighter leading-[100px] font-[100]"
@@ -469,96 +472,221 @@
     </div>
 
     <!-- Pricing Cards -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      <!-- Starter Plan -->
-      <div
-        class="bg-black/10 p-8 rounded-2xl shadow-lg flex flex-col justify-between border border-gray-200"
-      >
-        <div>
-          <h2 class="text-xl font-semibold mb-2">Starter Website Package</h2>
-          <p class="text-3xl font-bold mb-4">₹14,999*</p>
-          <ul class="text-left space-y-2 text-sm">
-            <li>✓ Up to 6 Pages</li>
-            <li>✓ Contact Form</li>
-            <li>✓ Click-to-call / WhatsApp button</li>
-            <li>✓ Social media links</li>
-            <li>✓ Basic SEO Setup</li>
-            <li>✓ Speed optimization</li>
-            <li>✓ Clean, mobile-responsive layout</li>
-            <li>✓ Custom color scheme</li>
-            <li>✓ Use of royalty-free images/icons</li>
-            <li>✓ Email support</li>
-          </ul>
-          <p class="text-xs text-gray-500 mt-4 italic text-left">
-            * Domain name, SSL Certificate and hosting billed separately if
-            needed.
-          </p>
-        </div>
-        <button
-          class="mt-6 bg-black/90 hover:bg-gray-600 text-white py-2 rounded"
-        >
-          Book a Call
-        </button>
+    <div class="flex relative justify-center gap-[80px] bg-red-000 w-full">
+      <!-- left arrow -->
+      <div class="flex">
+        <img
+          id="pricing-left-arrow"
+          class="w-[80px] pointer"
+          src="{% static 'svg/arrow-circle-left-svgrepo-com.svg' %}"
+          alt=""
+        />
       </div>
-
-      <!-- Business -->
-      <div
-        class="bg-black/10 p-8 rounded-2xl shadow-lg flex flex-col justify-between border-2 border-green-500"
-      >
-        <div>
-          <h2 class="text-xl font-semibold mb-2">Business Website Package</h2>
-          <p class="text-3xl font-bold mb-4">From: ₹29,999*</p>
-          <ul class="text-left space-y-2 text-sm">
-            <li>✓ Everything in Starter Package</li>
-            <li>+ 8–15 Total Pages</li>
-            <li>+ Custom design with animations</li>
-            <li>+ Admin Panel (CMS – Django)</li>
-            <li>+ Blog or News Management System</li>
-            <li>+ Appointment or Quote Request Forms</li>
-            <li>+ Newsletter Integration (Mailchimp etc.)</li>
-            <li>+ Google Maps Integration</li>
-            <li>+ Free SSL Certificate</li>
-            <li>+ 30 Days of Post-Launch Support</li>
-          </ul>
-          <p class="text-xs text-gray-500 mt-4 italic text-left">
-            * Domain name and hosting billed separately if needed.
-          </p>
-        </div>
-        <button
-          class="mt-6 bg-green-500 hover:bg-green-400 text-black font-semibold py-2 rounded"
+      <!-- cards wrapper -->
+      <div class="relative bg-blue-000">
+        <!-- rates websites -->
+        <div
+          class="grid grid-cols-1 w-full md:grid-cols-3 gap-8 max-w-6xl mx-auto bg-green-000"
         >
-          Book a call
-        </button>
+          <!-- Starter Plan -->
+          <div
+            class="bg-black/10 p-8 rounded-2xl shadow-lg flex flex-col justify-between border border-gray-200 pricing-website-single"
+          >
+            <div>
+              <h2 class="text-xl font-semibold mb-2">
+                Starter Website Package
+              </h2>
+              <p class="text-3xl font-bold mb-4">₹14,999*</p>
+              <ul class="text-left space-y-2 text-sm">
+                <li>✓ Up to 6 Pages</li>
+                <li>✓ Contact Form</li>
+                <li>✓ Click-to-call / WhatsApp button</li>
+                <li>✓ Social media links</li>
+                <li>✓ Basic SEO Setup</li>
+                <li>✓ Speed optimization</li>
+                <li>✓ Clean, mobile-responsive layout</li>
+                <li>✓ Custom color scheme</li>
+                <li>✓ Use of royalty-free images/icons</li>
+                <li>✓ Email support</li>
+              </ul>
+              <p class="text-xs text-gray-500 mt-4 italic text-left">
+                * Domain name, SSL Certificate and hosting billed separately if
+                needed.
+              </p>
+            </div>
+            <button
+              class="mt-6 bg-black/90 hover:bg-gray-600 text-white py-2 rounded"
+            >
+              Book a Call
+            </button>
+          </div>
+
+          <!-- Business -->
+          <div
+            class="bg-black/10 p-8 rounded-2xl shadow-lg flex flex-col justify-between border-2 border-green-500 pricing-website-single"
+          >
+            <div>
+              <h2 class="text-xl font-semibold mb-2">
+                Business Website Package
+              </h2>
+              <p class="text-3xl font-bold mb-4">From: ₹29,999*</p>
+              <ul class="text-left space-y-2 text-sm">
+                <li>✓ Everything in Starter Package</li>
+                <li>+ 8–15 Total Pages</li>
+                <li>+ Custom design with animations</li>
+                <li>+ Admin Panel (CMS – Django)</li>
+                <li>+ Blog or News Management System</li>
+                <li>+ Appointment or Quote Request Forms</li>
+                <li>+ Newsletter Integration (Mailchimp etc.)</li>
+                <li>+ Google Maps Integration</li>
+                <li>+ Free SSL Certificate</li>
+                <li>+ 30 Days of Post-Launch Support</li>
+              </ul>
+              <p class="text-xs text-gray-500 mt-4 italic text-left">
+                * Domain name and hosting billed separately if needed.
+              </p>
+            </div>
+            <button
+              class="mt-6 bg-green-500 hover:bg-green-400 text-black font-semibold py-2 rounded"
+            >
+              Book a call
+            </button>
+          </div>
+
+          <!-- Custom -->
+          <div
+            class="bg-black/10 p-8 rounded-2xl shadow-lg flex flex-col justify-between pricing-website-single"
+          >
+            <div>
+              <h2 class="text-xl font-semibold mb-2">Custom Website Package</h2>
+              <p class="text-3xl font-bold mb-4">From: ₹49,999*</p>
+              <ul class="text-left space-y-2 text-sm">
+                <li>✓ Everything in Business Package</li>
+                <li>+ Fully Custom Django Admin Panel</li>
+                <li>+ Custom models, views, and APIs as needed</li>
+                <li>+ Role-based authentication (admin, editor, users)</li>
+                <li>+ Integrated backend workflows (e.g. leads, job forms)</li>
+                <li>+ REST API or AJAX integration (optional)</li>
+                <li>+ Custom forms with validation & email triggers</li>
+                <li>+ Deployment to cloud (DigitalOcean, etc.)</li>
+                <li>+ Lifetime access to source code</li>
+                <li>+ 60 Days of Post-Launch Support</li>
+              </ul>
+              <p class="text-xs text-gray-500 mt-4 italic text-left">
+                * Domain name and hosting billed separately if needed.
+              </p>
+            </div>
+            <button
+              class="mt-6 bg-black/90 hover:bg-gray-600 text-white py-2 rounded"
+            >
+              Book a call
+            </button>
+          </div>
+        </div>
+        <!-- rates others -->
+        <div
+          class="bg-yellow-000 grid grid-cols-1 w-full md:grid-cols-3 gap-8 max-w-6xl mx-auto absolute top-0"
+        >
+          <!-- Photography -->
+          <div
+            class="bg-black/10 p-8 rounded-2xl shadow-lg flex flex-col justify-between border border-gray-200 opacity-0 rotate-y-0 pricing-others-single"
+          >
+            <div>
+              <h2 class="text-xl font-semibold mb-2">Photography</h2>
+              <p class="text-3xl font-bold mb-4">₹14,999*</p>
+              <ul class="text-left space-y-2 text-sm">
+                <li>✓ Up to 6 Pages</li>
+                <li>✓ Contact Form</li>
+                <li>✓ Click-to-call / WhatsApp button</li>
+                <li>✓ Social media links</li>
+                <li>✓ Basic SEO Setup</li>
+                <li>✓ Speed optimization</li>
+                <li>✓ Clean, mobile-responsive layout</li>
+                <li>✓ Custom color scheme</li>
+                <li>✓ Use of royalty-free images/icons</li>
+                <li>✓ Email support</li>
+              </ul>
+              <p class="text-xs text-gray-500 mt-4 italic text-left">
+                * Domain name, SSL Certificate and hosting billed separately if
+                needed.
+              </p>
+            </div>
+            <button
+              class="mt-6 bg-black/90 hover:bg-gray-600 text-white py-2 rounded"
+            >
+              Book a Call
+            </button>
+          </div>
+
+          <!-- 3D Design -->
+          <div
+            class="bg-black/10 p-8 rounded-2xl shadow-lg flex flex-col justify-between border-2 border-green-500 opacity-0 rotate-y-0 pricing-others-single"
+          >
+            <div>
+              <h2 class="text-xl font-semibold mb-2">3D Design Plans</h2>
+              <p class="text-3xl font-bold mb-4">From: ₹29,999*</p>
+              <ul class="text-left space-y-2 text-sm">
+                <li>✓ Everything in Starter Package</li>
+                <li>+ 8–15 Total Pages</li>
+                <li>+ Custom design with animations</li>
+                <li>+ Admin Panel (CMS – Django)</li>
+                <li>+ Blog or News Management System</li>
+                <li>+ Appointment or Quote Request Forms</li>
+                <li>+ Newsletter Integration (Mailchimp etc.)</li>
+                <li>+ Google Maps Integration</li>
+                <li>+ Free SSL Certificate</li>
+                <li>+ 30 Days of Post-Launch Support</li>
+              </ul>
+              <p class="text-xs text-gray-500 mt-4 italic text-left">
+                * Domain name and hosting billed separately if needed.
+              </p>
+            </div>
+            <button
+              class="mt-6 bg-green-500 hover:bg-green-400 text-black font-semibold py-2 rounded"
+            >
+              Book a call
+            </button>
+          </div>
+
+          <!-- Custom -->
+          <div
+            class="bg-black/10 p-8 rounded-2xl shadow-lg flex flex-col justify-between opacity-0 rotate-y-0 pricing-others-single"
+          >
+            <div>
+              <h2 class="text-xl font-semibold mb-2">Custom Website Package</h2>
+              <p class="text-3xl font-bold mb-4">From: ₹49,999*</p>
+              <ul class="text-left space-y-2 text-sm">
+                <li>✓ Everything in Business Package</li>
+                <li>+ Fully Custom Django Admin Panel</li>
+                <li>+ Custom models, views, and APIs as needed</li>
+                <li>+ Role-based authentication (admin, editor, users)</li>
+                <li>+ Integrated backend workflows (e.g. leads, job forms)</li>
+                <li>+ REST API or AJAX integration (optional)</li>
+                <li>+ Custom forms with validation & email triggers</li>
+                <li>+ Deployment to cloud (DigitalOcean, etc.)</li>
+                <li>+ Lifetime access to source code</li>
+                <li>+ 60 Days of Post-Launch Support</li>
+              </ul>
+              <p class="text-xs text-gray-500 mt-4 italic text-left">
+                * Domain name and hosting billed separately if needed.
+              </p>
+            </div>
+            <button
+              class="mt-6 bg-black/90 hover:bg-gray-600 text-white py-2 rounded"
+            >
+              Book a call
+            </button>
+          </div>
+        </div>
       </div>
-
-      <!-- Custom -->
-      <div
-        class="bg-black/10 p-8 rounded-2xl shadow-lg flex flex-col justify-between"
-      >
-        <div>
-          <h2 class="text-xl font-semibold mb-2">Custom Website Package</h2>
-          <p class="text-3xl font-bold mb-4">From: ₹49,999*</p>
-          <ul class="text-left space-y-2 text-sm">
-            <li>✓ Everything in Business Package</li>
-            <li>+ Fully Custom Django Admin Panel</li>
-            <li>+ Custom models, views, and APIs as needed</li>
-            <li>+ Role-based authentication (admin, editor, users)</li>
-            <li>+ Integrated backend workflows (e.g. leads, job forms)</li>
-            <li>+ REST API or AJAX integration (optional)</li>
-            <li>+ Custom forms with validation & email triggers</li>
-            <li>+ Deployment to cloud (DigitalOcean, etc.)</li>
-            <li>+ Lifetime access to source code</li>
-            <li>+ 60 Days of Post-Launch Support</li>
-          </ul>
-          <p class="text-xs text-gray-500 mt-4 italic text-left">
-            * Domain name and hosting billed separately if needed.
-          </p>
-        </div>
-        <button
-          class="mt-6 bg-black/90 hover:bg-gray-600 text-white py-2 rounded"
-        >
-          Book a call
-        </button>
+      <!-- right arrow -->
+      <div class="flex">
+        <img
+          id="pricing-right-arrow"
+          class="w-[80px] pointer"
+          src="{% static 'svg/arrow-circle-right-svgrepo-com.svg' %}"
+          alt=""
+        />
       </div>
     </div>
   </div>
