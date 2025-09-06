@@ -15,9 +15,94 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
   <body class="bg-black w-screen overflow-x-hidden">
+    <!-- header -->
     <header></header>
     {% block content %} {% endblock %}
-    <footer></footer>
+    <!-- footer -->
+    <footer>
+      <!-- top -->
+      <div
+        class="w-full bg-[#392c41] text-white flex justify-between py-20 px-28"
+      >
+        <h1 class="text-5xl tracking-[-0.05em]">Let's find harmony together</h1>
+        <form
+          action="#"
+          class="flex border border-[#b5b5b5] rounded-sm w-[370px] justify-around px-9 py-2.5 pl-1 gap-1"
+        >
+          <input type="text" name="" id="" class="w-full" />
+          <button class="text-sm font-semibold">Submit</button>
+        </form>
+      </div>
+
+      <!-- bottom -->
+      <div class="text-[#878787]">
+        <div class="text-white p-20 flex">
+          <!-- left -->
+          <div class="tracking-[1px] w-[60%]">
+            <div>
+              <h1 class="text-2xl font-semibold tracking-[-0.05em]">
+                NorthernArc Studio
+              </h1>
+              <div class="text-[#bebebe] text-[13px] mt-3">
+                <p>#17, M-Block, Jubbal House</p>
+                <p>Parimahal, Panthaghati</p>
+                <p>Shimla, Himachal Pradesh 171009</p>
+                <p>India</p>
+              </div>
+            </div>
+            <div class="flex gap-5 mt-5 text-[13px]">
+              <div class="flex flex-col gap-1 text-[#bebebe] text-[13px]">
+                <p>Phone Number</p>
+                <p class="text-white text-[14px] font-semibold tracking-wide">
+                  94593-96911
+                </p>
+              </div>
+              <div class="flex flex-col gap-1 text-[#bebebe] text-[13px]">
+                <p>Email</p>
+                <a
+                  href="mailto:northernarcstudio@gmail.com"
+                  class="text-white text-[14px] font-semibold tracking-tight"
+                >
+                  northernarcstudio@gmail.com
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- right -->
+          <div class="flex justify-around w-[40%]">
+            <!-- links -->
+            <div class="flex flex-col gap-2 text-[13px] text-[#4f8096]">
+              <p class="text-[#9b9b9b] text-[16px]">Quick Links</p>
+              <a href="#">Pricing</a>
+              <a href="#">About us</a>
+              <a href="#">FAQ</a>
+              <a href="#">Contact us</a>
+            </div>
+            <!-- social -->
+            <div class="flex flex-col gap-2 text-[13px] text-[#4f8096]">
+              <p class="text-[#9b9b9b] text-[16px]">Social</p>
+              <a href="#">Facebook</a>
+              <a href="#">Instagram</a>
+              <a href="#">Youtube</a>
+            </div>
+            <!-- legal -->
+            <div class="flex flex-col gap-2 text-[13px] text-[#4f8096]">
+              <p class="text-[#9b9b9b] text-[16px]">Legal</p>
+              <a href="#">Terms of service</a>
+              <a href="#">Privacy policy</a>
+              <a href="#">Cookie policy</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- copyright -->
+        <p class="text-[13px] text-center text-[#7c7c7c]">
+          Copyright 2025 NorthernArcStudio. All Rights Reserved
+        </p>
+      </div>
+    </footer>
+
     <script src="{% static 'js/animations.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.6/dist/htmx.min.js"></script>
   </body>
