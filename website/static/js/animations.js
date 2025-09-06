@@ -191,6 +191,22 @@ function pricingFlipOnClick(arrow, rotateY, opacity, rotateOthers, opacityOthers
   })
 }
 
+function faqsShow(){
+  const items = document.querySelectorAll(".faq-show-answer")
+  items.forEach((item) => {
+    item.addEventListener('click', () => {
+      var parentElement = item.parentNode
+      var childElement = parentElement.children[1]
+      gsap.to(childElement, {
+          height: "auto",
+          ease: "power4.out",
+          opacity: 1,
+          duration: 0.6,
+      })
+    })
+  })
+}
+
 
 
 
@@ -286,3 +302,6 @@ sizeChangeOnHover();
 pricingFlipOnClick("#pricing-right-arrow", 360 * 4, 0, 360 * 4, 1 );
 pricingFlipOnClick("#pricing-left-arrow", 0, 1, 0, 0);
 
+
+// faq
+faqsShow();
