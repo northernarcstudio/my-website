@@ -1,0 +1,73 @@
+Homestay Website
+
+
+1. Hero Section (First Impression)
+
+Big background photo or video of the property.
+
+Name, tagline (e.g., “Your Home in the Hills”).
+
+Call-to-action button: “Book Now”.
+
+
+
+2. About / Welcome Message
+
+Short intro about the property.
+
+Unique selling points (heritage, views, local experience).
+
+
+
+
+3. Rooms & Rates
+
+Room categories with photos, amenities, and prices.
+
+Link to detailed pages or booking.
+
+
+
+
+4. Photo Gallery / Virtual Tour
+
+High-quality photos of rooms, food, common areas, surroundings.
+
+(Optional) 360° view or video.
+
+
+
+
+5. Amenities & Facilities
+
+WiFi, parking, breakfast, pool, local tours, etc.
+
+Icons + short descriptions for quick scan.
+
+
+
+6. Nearby Attractions / Experiences
+
+Things to do around (treks, sightseeing, cultural spots).
+
+Helps guests imagine their stay.
+
+
+
+
+7. Guest Reviews & Testimonials
+
+Highlight positive experiences from Google/Booking.com/Airbnb.
+
+Adds trust and credibility.
+
+
+
+
+8. Contact & Location
+
+Address, phone, WhatsApp link.
+
+Google Maps integration.
+
+Quick “Get Directions” button.
