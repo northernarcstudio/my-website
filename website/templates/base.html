@@ -16,7 +16,35 @@
   </head>
   <body class="bg-black w-screen overflow-x-hidden">
     <!-- header -->
-    <header></header>
+    <header class="h-fit">
+      <!-- navbar -->
+      <nav
+        class="flex justify-between text-base px-10 py-2.5 h-20 fixed top-0 left-0 z-[9999] w-full text-white"
+      >
+        <!-- logo -->
+        <div>
+          <a href="#" class="font-extrabold">NAS</a>
+        </div>
+        <!-- brand name -->
+        <div>
+          <a href="#">Northern Arc Studio</a>
+        </div>
+        <!-- menu -->
+        <div>
+          <ul class="flex gap-8 tracking-tighter">
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#demos">Demos</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
     {% block content %} {% endblock %}
     <!-- footer -->
     <footer>
